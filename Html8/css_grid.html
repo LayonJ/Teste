@@ -1,0 +1,324 @@
+<!doctype html><html><head> 
+  <title>Wildbeast</title> 
+  <meta name="viewpor" content="width=device-width, initial-scale=1"> 
+  <meta charset="UTF-8"> 
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css"> 
+ <style type="text/css" id="dcoder_stylesheet">body, h1, li, p, ul, blockquote{
+  padding: 0px;
+  margin: 0px;
+  
+}
+
+body{
+  font-family: 'Vollkorn', serif;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+/* GRID GERAL */
+  
+.estrutura{
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-areas:
+    "cabecalho cabecalho cabecalho"
+    "sidenav conteudo anuncios"
+    "footer footer footer"
+    ;
+}
+
+/* HEADER */
+
+.cabecalho{
+  grid-area: cabecalho;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.logo{
+  max-width: 200px;
+}
+
+.sidenav{
+  grid-area: sidenav;
+}
+
+.cabecalho nav ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cabecalho nav a{
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-size: 1.125;
+  background: rgba(0, 0, 0, .1);
+  
+}
+
+.cabecalho li + li{
+  margin-left: 30px;
+}
+
+.sidenav{
+  grid-area: sidenav;
+  padding: 30px;
+  background-color: #fafbfc;
+  
+}
+
+.sidenav li a{
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+  transition: 0.1s ease-out;
+}
+
+.sidenav li a:hover{
+  background-color: #B07DFB;
+}
+
+.conteudo{
+  grid-area: conteudo;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  
+}
+
+.col-expansao{
+  grid-column: 1 / -1;
+}
+
+.imagem-1{
+  grid-row: span 2;
+  align-self: end;
+}
+
+.imagem-2{
+  align-self: end;
+}
+
+/* ESTRUTURA GERAL */
+
+p{
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-spacing: -0.005em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.informacoes p + p{
+  margin-top: 30px;
+}
+
+/* TITULO */
+
+.titulo{
+  color: #B07DFB;
+}
+
+.titulo h1{
+  font-size: 3.75em;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.titulo span{
+  font-size: 0.875em;
+  font-style: italic;
+}
+
+/*CARACTERÍSTICAS*/
+ 
+ .caracteristicas{
+   display: flex;
+   align-items: start;
+ }
+ 
+ .caracteristicas > div{
+   width: 80px;
+   background: linear-gradient(135deg, #8844ee, #B07DFB);
+   text-align: center;
+   box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+   border-radius: 5px;
+   position: relative;
+ }
+ 
+ .caracteristicas > div:first-child{
+   margin-right: 30px;
+ }
+
+.numero{
+  color: #B07DFB;
+  font-size: 3em;
+  line-height: 1;
+  margin: 10px auto;
+}
+
+.caracteristicas span{
+  display: block;
+}
+
+.rotulo{
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  color: #B07DFB; 
+  position: relative;
+  top: 2px;
+}
+
+.destaque{
+  font-size: 0.875em;
+  color: #B07DFB;
+  max-width: 16em;
+}
+
+.atributos, .citacao{
+  align-self: start;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.citacao p{
+  font-size: 1.5em;
+  color: #fff;
+  text-align: center;
+  max-width: 500px;
+  font-style: italic;
+  margin: 0 auto;
+  
+}
+
+.atributos li{
+  color: #fff;
+  font-size: 1.125em;
+  font-family: Courier, monospace;
+  padding: 15px;
+}
+
+.atributos li + li{
+  border-top: 1px solid #B07DFB;
+}
+
+
+.anuncios{
+  grid-area: anuncios;
+  background-color: #fafbfc;
+  display: grid;
+  align-content: start;
+  padding: 30px;
+  grid-gap: 30px;
+}
+
+.rodape{
+  grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  color: #fff;
+}
+
+.rodape p{
+  text-align: center;
+  padding: 30px;
+}</style></head> 
+ <body> 
+  <div class="estrutura"> 
+   <header class="cabecalho"> 
+    <a href="#" class="logo"><img src="/sdcard/Html8/img/wildbeast.svg"></a> 
+    <nav> 
+     <ul> 
+      <li><a href="#">Sobre</a></li> 
+      <li><a href="#">Home</a></li> 
+      <li><a href="#">Contato</a></li> 
+     </ul> 
+    </nav> 
+   </header> 
+   <nav class="sidenav"> 
+    <ul> 
+     <li><a href="#"><img src="/sdcard/Html8/img/icones/cervo.svg"></a></li> 
+     <li><a href="#"><img src="/sdcard/Html8/img/icones/leao.svg"></a></li> 
+     <li><a href="#"><img src="/sdcard/Html8/img/icones/gato.svg"></a></li> 
+     <li><a href="#"><img src="/sdcard/Html8/img/icones/vaca.svg"></a></li> 
+     <li><a href="#"><img src="/sdcard/Html8/img/icones/ovelha.svg"></a></li> 
+     <li><a href="#"><img src="/sdcard/Html8/img/icones/abelha.svg"></a></li> 
+    </ul> 
+   </nav> 
+   <main class="conteudo"> 
+    <div class="titulo"> 
+     <h1> Lobo Cinza </h1> 
+     <span>da família canis lupus</span> 
+    </div> 
+    <div class="caracteristicas"> 
+     <div> 
+      <span class="numero">72</span> 
+      <span class="rotulo">Kg</span> 
+     </div> 
+     <div> 
+      <span class="numero">13</span> 
+      <span class="rotulo">age</span> 
+     </div> 
+    </div> 
+    <p class="col-expansao">É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos genéticos reafirmam que o lobo cinzento é ancestral do cão doméstico.</p> 
+    <img class="imagem-1" src="/sdcard/Html8/img/wolf1.jpg"> 
+    <p class="destaque">É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos.</p> 
+    <img class="imagem-2" src="/sdcard/Html8/img/wolf2.jpg"> 
+    <p>O peso e tamanho dos lobos variam muito em todo o mundo, tendendo a aumentar proporcionalmente com a latitude, como previsto pela teoria de Christian Bergmann. Em geral, a altura, medida a partir dos ombros, varia de 60 a 95 centímetros.</p> 
+    <p>O peso varia geograficamente. Em média, os lobos europeus pesam 38,5 kg; os lobos da América do Norte, 36 kg; os lobos indianos e árabes, 25 kg.[7] Embora raros, lobos com mais de 77 kg foram encontrados no Alasca, Canadá,[8] e na antiga União Soviética.</p> 
+    <blockquote class="citacao col-expansao"> 
+     <p>“Há algo no uivar do lobo que tira um homem do aqui e agora e o transporta para uma floresta da mente.”</p> 
+    </blockquote> 
+    <ul class="atributos"> 
+     <li>Surgiu: 12.000 anos</li> 
+     <li>Tipo: Mamífero</li> 
+     <li>Idade Média: 13 anos</li> 
+     <li>Macho adulto: 80kg</li> 
+     <li>Fêmea adulta: 55kg</li> 
+     <li>Família: Lupus</li> 
+    </ul> 
+    <div class="informacoes"> 
+     <p>É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos genéticos reafirmam que o lobo cinzento é ancestral do cão doméstico.</p> 
+     <p>É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.[2] O sequenciamento de DNA e estudos genéticos reafirmam que o lobo cinzento é ancestral do cão doméstico.</p> 
+    </div> 
+    <img class="col-expansao" src="/sdcard/Html8/img/wolf3.jpg"> 
+   </main> 
+   <aside class="anuncios"> 
+    <div class="anuncio-item"> 
+     <img src="/sdcard/Html8/img/anuncio-1.jpg"> 
+    </div> 
+    <div class="anuncio-item"> 
+     <img src="/sdcard/Html8/img/anuncio-2.jpg"> 
+    </div> 
+   </aside> 
+   <footer class="rodape"> 
+    <p>Origamid © 2012 - 2020. Alguns direitos reservados.</p> 
+   </footer> 
+  </div> 
+ 
+</body></html>
